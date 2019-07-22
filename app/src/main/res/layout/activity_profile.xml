@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Profile"
+    android:orientation="vertical"
+    >
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentTop="true"
+
+        android:id="@+id/rel1"
+
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_15sdp"
+            app:cardBackgroundColor="@color/colorAccent"
+            android:layout_marginBottom="@dimen/_3sdp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenirltstd_light"
+                    android:text="Profile"
+                    android:textColor="@color/colorDark"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+
+
+
+                    />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel1"
+        android:id="@+id/rel2"
+        android:background="@color/colorAccent"
+                >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/rel4"
+
+
+
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="@dimen/_100sdp"
+                android:elevation="@dimen/_15sdp"
+
+                app:cardBackgroundColor="@color/colorAccent"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_person"
+                    android:id="@+id/img_status"
+                    android:scaleType="fitXY"
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel4"
+            android:layout_marginBottom="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/colorAccent"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_3sdp"
+                android:elevation="@dimen/_10sdp"
+
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name : "
+                            android:textColor="@color/colorDark"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/avenirltstd_light"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:textStyle="bold"
+
+                            />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/avenirltstd_light"
+                    android:text="Akash Gupta"
+                    android:textColor="@color/colorDark"
+                    android:textSize="@dimen/_15sdp"
+                    android:gravity="center"
+                    />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorDark"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Address :  "
+                            android:textStyle="bold"
+                            android:textColor="@color/colorDark"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/avenirltstd_light"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_5sdp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/avenirltstd_light"
+                            android:text="Hno 12/A Dwarka Sector 21"
+                            android:textColor="@color/colorDark"
+                            android:textSize="@dimen/_13sdp"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorDark"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone : "
+                            android:textColor="@color/colorDark"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/avenirltstd_light"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_5sdp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/avenirltstd_light"
+                            android:text="123456789"
+                            android:textColor="@color/colorDark"
+                            android:textSize="@dimen/_15sdp"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/rel2"
+        android:layout_marginTop="@dimen/_minus50sdp"
+        android:id="@+id/rel3"
+
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            >
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:labelVisibilityMode="labeled"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            app:menu="@menu/menu_bottomnavigation"
+            app:itemIconTint="@drawable/bottom_nav_selected_color"
+            android:id="@+id/bottom_nav_view"
+            app:itemTextColor="@drawable/bottom_nav_selected_color"
+            android:background="@color/colorAccent"
+
+
+            >
+
+
+
+
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

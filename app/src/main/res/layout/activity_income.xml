@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Income"
+    android:background="@color/colorAccent"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentTop="true"
+
+        android:id="@+id/rel1"
+
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_15sdp"
+            app:cardBackgroundColor="@color/colorAccent"
+            android:layout_marginBottom="@dimen/_3sdp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenirltstd_light"
+                    android:text="Income"
+                    android:textColor="@color/colorDark"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+
+
+
+                    />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rel1"
+            android:id="@+id/rec_income"
+        android:layout_marginBottom="@dimen/_50sdp"
+            >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/rec_income"
+       android:layout_marginTop="@dimen/_minus50sdp"
+        android:id="@+id/rel3"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_3sdp"
+            >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:labelVisibilityMode="labeled"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            app:menu="@menu/menu_bottomnavigation"
+            app:itemIconTint="@drawable/bottom_nav_selected_color"
+            android:id="@+id/bottom_nav_view"
+            app:itemTextColor="@drawable/bottom_nav_selected_color"
+            android:background="@color/colorAccent"
+
+
+            >
+
+
+
+
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
