@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Details">
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:elevation="@dimen/_20sdp"
+        android:layout_alignParentTop="true"
+        app:cardBackgroundColor="@color/colorAccent"
+        android:id="@+id/card1"
+
+        >
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/rel1"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenirltstd_light"
+                android:text="Status"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_15sdp"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:gravity="center"
+
+
+
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card1"
+        android:id="@+id/scroll"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="@dimen/_3sdp"
+                android:elevation="@dimen/_20sdp"
+
+                android:layout_margin="@dimen/_5sdp"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardCornerRadius="@dimen/_3sdp"
+                        android:elevation="@dimen/_20sdp"
+                        android:id="@+id/car1"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/line"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/txt_date"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:text="23rd July 19"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorDark"
+                                android:gravity="center"
+
+                                />
+
+                            <View
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorDark"
+
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:id="@+id/txt_time"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:text="12:12 PM"
+                                android:gravity="center"
+                                android:textSize="@dimen/_15sdp"
+                                android:textColor="@color/colorDark"
+                                android:textStyle="bold"
+
+                                />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenirltstd_light"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorDark"
+                        android:textStyle="bold"
+                        android:text="User Details"
+                        android:textSize="@dimen/_13sdp"
+
+
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            >
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:src="@drawable/emp"
+
+
+
+                                />
+
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="3"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Name : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Akash Gupta"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Phone : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="123456789"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Emp ID : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="00023456"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/avenirltstd_light"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorDark"
+                        android:textStyle="bold"
+                        android:text="Vehicle Details"
+                        android:textSize="@dimen/_13sdp"
+
+
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/_10sdp"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+
+                            >
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:src="@drawable/car"
+
+
+
+                                />
+
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:weightSum="2"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Vehicle Name : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="WagonR"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Vehicle Number : "
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="DL 8C 235"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/avenirltstd_light"
+
+                                    android:textColor="@color/colorDark"
+
+
+                                    />
+
+
+                            </LinearLayout>
+
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+        android:background="@color/colorWhite"
+     android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:layout_below="@id/scroll"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            app:cardBackgroundColor="@color/colorAccent"
+
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            app:cardCornerRadius="@dimen/_3sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            >
+
+
+            <Button
+                android:id="@+id/btn_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:background="@color/colorRed"
+                android:fontFamily="@font/avenirltstd_light"
+                android:text="Not Parked"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_20sdp"
+
+            >
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:labelVisibilityMode="labeled"
+                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                app:menu="@menu/menu_bottomnavigation"
+                app:itemIconTint="@drawable/bottom_nav_selected_color"
+                android:id="@+id/bottom_nav_view"
+                app:itemTextColor="@drawable/bottom_nav_selected_color"
+                android:background="@color/colorAccent"
+
+                >
+
+
+
+
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+

@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,7 @@ import com.booking.parkingss.Adapter.Service_details_adapter;
 import com.booking.parkingss.Model.Users;
 import com.booking.parkingss.R;
 import com.booking.parkingss.Utility.BottomNavHelper;
+import com.booking.parkingss.Utility.OnHotelListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ import java.util.List;
 
 public class Income extends AppCompatActivity {
 
-    private static final int ACTIVITY_NUM = 1;
+    private static final int ACTIVITY_NUM = 2;
     Context context = Income.this;
     RecyclerView rec_income;
 
@@ -49,22 +51,22 @@ public class Income extends AppCompatActivity {
         rec_income = findViewById(R.id.rec_income);
 
         Users users = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Pickup","Regular","10","",R.drawable.ic_car);
+                "Pickup","Regular","10","",R.drawable.ic_car_black);
 
         Users users1 = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Drop","Regular","10","",R.drawable.ic_car);
+                "Drop","Regular","10","",R.drawable.ic_car_black);
         Users users2 = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Pickup","Temporary","10","",R.drawable.ic_car);
+                "Pickup","Temporary","10","",R.drawable.ic_car_black);
         Users users3 = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Drop","Regular","10","",R.drawable.ic_car);
+                "Drop","Regular","10","",R.drawable.ic_car_black);
         Users users4 = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Drop","Regular","10","",R.drawable.ic_car);
+                "Drop","Regular","10","",R.drawable.ic_car_black);
         Users users5 = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Pickup","Temporary","10","",R.drawable.ic_car);
+                "Pickup","Temporary","10","",R.drawable.ic_car_black);
         Users users6 = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Pickup","Regular","10","",R.drawable.ic_car);
+                "Pickup","Regular","10","",R.drawable.ic_car_black);
         Users users7 = new Users("Akash Gupta","123456789","abcd@gmail.com","",
-                "Drop","Regular","10","",R.drawable.ic_car);
+                "Drop","Regular","10","",R.drawable.ic_car_black);
 
 
         usersList.add(users);
@@ -76,9 +78,18 @@ public class Income extends AppCompatActivity {
         usersList.add(users6);
         usersList.add(users7);
 
-        Service_details_adapter service_details_adapter = new Service_details_adapter(this,usersList);
+        Service_details_adapter adapter = new Service_details_adapter(Income.this, usersList, new OnHotelListener() {
+            @Override
+            public void onItemClick(Users item) {
+                Intent intent = new Intent(Income.this, Details.class);
+                startActivity(intent);
+
+            }
+        });
+
+       // Service_details_adapter service_details_adapter = new Service_details_adapter(this,usersList);
         rec_income.setLayoutManager(new LinearLayoutManager(this,LinearLayout.VERTICAL,false));
-        rec_income.setAdapter(service_details_adapter);
+        rec_income.setAdapter(adapter);
 
 
 

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.booking.parkingss.Model.Users;
 import com.booking.parkingss.R;
+import com.booking.parkingss.Utility.OnHotelListener;
 
 import java.util.List;
 
@@ -20,10 +21,12 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
 
     private Context mContext;
     private List<Users> usersList;
+    private OnHotelListener listener;
 
-    public Service_details_adapter(Context mContext, List<Users> amenitiesList) {
+    public Service_details_adapter(Context mContext, List<Users> usersList, OnHotelListener listener) {
         this.mContext = mContext;
-        this.usersList = amenitiesList;
+        this.usersList = usersList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -41,6 +44,8 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
 //        UniversalImageLoader universalImageLoader = new UniversalImageLoader(mContext);
 //        ImageLoader.getInstance().init(universalImageLoader.getConfig());
+
+        myViewHolder.bind(usersList.get(i), listener);
         Users users = usersList.get(i);
 //
 //        UniversalImageLoader.setImage(amenities.getAmenities_img(),myViewHolder.img_amenities,null,"https://");
@@ -77,7 +82,15 @@ name = itemView.findViewById(R.id.txt_name);
             img_profile = itemView.findViewById(R.id.img_profile);
 
         }
+        public void bind(final Users hotel, final OnHotelListener listener) {
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(hotel);
+                }
+            });
+        }
 
     }
 

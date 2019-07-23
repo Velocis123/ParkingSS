@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Splash"
+    android:background="@color/colorPrimary"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/rel3"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:gravity="center"
+android:orientation="vertical"
+
+
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="@dimen/_100sdp"
+            android:elevation="@dimen/_15sdp"
+android:id="@+id/rel2"
+            app:cardBackgroundColor="@color/colorWhite"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_carblue"
+                android:id="@+id/img_status"
+                android:scaleType="fitXY"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenirltstd_light"
+            android:text="ParkingSS"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_25sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+
+            android:gravity="center"
+            android:padding="@dimen/_15sdp"
+
+
+
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true"
+
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <ProgressBar
+            android:visibility="visible"
+            android:id="@+id/pr"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+
+
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:indeterminate="true"
+            android:theme="@style/RedAccent" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

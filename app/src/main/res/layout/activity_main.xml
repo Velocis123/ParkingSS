@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorWhite"
     >
 
 
@@ -39,12 +39,12 @@
     android:layout_height="wrap_content"
     android:fontFamily="@font/avenirltstd_light"
     android:text="ParkingSS"
-    android:textColor="@color/colorDark"
+    android:textColor="@color/colorWhite"
     android:textSize="@dimen/_25sdp"
     android:layout_centerInParent="true"
     android:textStyle="bold"
     android:gravity="center"
-android:drawableLeft="@drawable/ic_car_black"
+android:drawableLeft="@drawable/ic_car"
 
 
     />
@@ -69,7 +69,7 @@ android:drawableLeft="@drawable/ic_car_black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Your Status"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorDark"
             android:fontFamily="@font/avenirltstd_light"
             android:textSize="@dimen/_15sdp"
             android:gravity="center"
@@ -113,7 +113,7 @@ android:id="@+id/rel3"
     app:cardCornerRadius="@dimen/_100sdp"
     android:elevation="@dimen/_15sdp"
 
-    app:cardBackgroundColor="@color/colorAccent"
+    app:cardBackgroundColor="@color/colorWhite"
 
     >
 
@@ -138,7 +138,7 @@ android:scaleType="fitXY"
         android:layout_below="@+id/rel3"
 
        android:layout_marginTop="@dimen/_40sdp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorWhite"
         android:gravity="center"
 
       >
@@ -146,7 +146,7 @@ android:scaleType="fitXY"
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/_250sdp"
             android:layout_height="@dimen/_35sdp"
-           app:cardBackgroundColor="@color/colorPrimary"
+           app:cardBackgroundColor="@color/colorAccent"
             android:layout_centerInParent="true"
             android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginBottom="@dimen/_3sdp"
@@ -160,12 +160,12 @@ android:scaleType="fitXY"
             android:layout_height="match_parent"
 
 
-            android:background="@color/colorAccent"
+            android:background="@color/colorPrimary"
             android:fontFamily="@font/avenirltstd_light"
             android:text="Requests"
             android:gravity="center"
             android:textAllCaps="false"
-            android:textColor="@color/colorDark"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/_13sdp"
             android:textStyle="bold" />
 

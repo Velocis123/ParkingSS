@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import com.booking.parkingss.Activity.Income;
 import com.booking.parkingss.Activity.MainActivity;
 import com.booking.parkingss.Activity.Profile;
+import com.booking.parkingss.Activity.Status;
 import com.booking.parkingss.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -29,6 +30,11 @@ public class BottomNavHelper {
                     case R.id.income:
                         Intent intent1 = new Intent(context, Income.class);
                         context.startActivity(intent1);
+                        break;
+
+                    case R.id.status:
+                        Intent intent3 = new Intent(context, Status.class);
+                        context.startActivity(intent3);
                         break;
 
                     case R.id.profile:
