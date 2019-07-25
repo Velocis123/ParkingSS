@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Details_Paying">
-
-
-
+    tools:context=".Activity.Requests">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -52,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/avenirltstd_light"
-                android:text="Details"
+                android:text="Requests"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/_15sdp"
                 android:layout_centerInParent="true"
@@ -66,20 +63,19 @@
 
     </androidx.cardview.widget.CardView>
 
-    <FrameLayout
-        android:layout_width="wrap_content"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/card1"
-        android:id="@+id/framelayout"
-
+        android:id="@+id/rec_requests"
         >
 
 
 
+    </androidx.recyclerview.widget.RecyclerView>
 
 
-    </FrameLayout>
+
 
 </RelativeLayout>
-
-

@@ -3,12 +3,14 @@ package com.booking.parkingss.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +26,7 @@ ImageView img_status;
 TextView txt_status;
 Boolean flag= false;
 GestureDetector gestureDetector;
+Button btn_req;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,7 @@ GestureDetector gestureDetector;
 
 txt_status=findViewById(R.id.txt_status);
 img_status = findViewById(R.id.img_status);
-
+btn_req = findViewById(R.id.btn_req);
 gestureDetector = new GestureDetector(this,new MyGesturesListener() );
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
         BottomNavHelper.enableNavigation(context,bottomNavigationView);
@@ -40,6 +43,14 @@ gestureDetector = new GestureDetector(this,new MyGesturesListener() );
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+
+        btn_req.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Requests.class);
+                startActivity(intent);
+            }
+        });
 
 img_status.setOnTouchListener(new View.OnTouchListener() {
     @Override

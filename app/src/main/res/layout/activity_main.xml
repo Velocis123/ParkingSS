@@ -155,7 +155,7 @@ android:scaleType="fitXY"
 
 
         <Button
-            android:id="@+id/btn_book_now"
+            android:id="@+id/btn_req"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 

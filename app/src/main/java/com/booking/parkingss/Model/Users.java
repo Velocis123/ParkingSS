@@ -11,8 +11,10 @@ public class Users {
     private String charges ;
     private String img;
     private int img_demo;
+    private String time;
+    private String date;
 
-    public Users(String name, String mobile, String e_mail, String location, String type, String vehicle_type, String charges, String img, int img_demo) {
+    public Users(String name, String mobile, String e_mail, String location, String type, String vehicle_type, String charges, String img, int img_demo, String time, String date) {
         this.name = name;
         this.mobile = mobile;
         this.e_mail = e_mail;
@@ -22,6 +24,25 @@ public class Users {
         this.charges = charges;
         this.img = img;
         this.img_demo = img_demo;
+        this.time = time;
+        this.date = date;
+    }
+
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getImg() {

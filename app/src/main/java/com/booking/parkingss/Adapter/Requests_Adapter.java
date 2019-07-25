@@ -1,7 +1,6 @@
 package com.booking.parkingss.Adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +18,14 @@ import com.booking.parkingss.Utility.OnHotelListener;
 
 import java.util.List;
 
-public class Service_details_adapter extends  RecyclerView.Adapter<Service_details_adapter.MyViewHolder> {
+public class Requests_Adapter extends  RecyclerView.Adapter<Requests_Adapter.MyViewHolder> {
 
     private Context mContext;
     private List<Users> usersList;
     private OnHotelListener listener;
     private Flag flag;
 
-    public Service_details_adapter(Context mContext, List<Users> usersList, OnHotelListener listener) {
+    public Requests_Adapter(Context mContext, List<Users> usersList, OnHotelListener listener) {
         this.mContext = mContext;
         this.usersList = usersList;
         this.listener = listener;
@@ -36,7 +35,7 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(mContext)
-                .inflate(R.layout.fragment_income, viewGroup, false);
+                .inflate(R.layout.fragment_requests, viewGroup, false);
 
         return new MyViewHolder(itemView);
 
@@ -53,23 +52,9 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
 //
 //        UniversalImageLoader.setImage(amenities.getAmenities_img(),myViewHolder.img_amenities,null,"https://");
 
-        myViewHolder.name.setText(users.getName());
-        myViewHolder.type.setText(users.getType());
-      //  myViewHolder.date.setText(users.getDate());
-        myViewHolder.income.setText(users.getCharges() + " /-");
-        myViewHolder.img_profile.setImageResource(users.getImg_demo());
-      //  myViewHolder.time.setText(users.getTime());
 
-        flag = new Flag();
 
-        if (!flag.isFlag()){
 
-            myViewHolder.card3.setVisibility(View.GONE);
-
-        }else {
-            myViewHolder.card3.setVisibility(View.VISIBLE);
-
-        }
 
 
     }
@@ -84,19 +69,13 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-TextView name,type,date,income,time;
-ImageView img_profile;
+        TextView name,type,date,income,time;
+        ImageView img_profile;
 
         CardView card3;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-name = itemView.findViewById(R.id.txt_name);
-            type = itemView.findViewById(R.id.txt_type);
-            date = itemView.findViewById(R.id.txt_date);
-            income = itemView.findViewById(R.id.txt_income);
-            img_profile = itemView.findViewById(R.id.img_profile);
-            time = itemView.findViewById(R.id.txt_time);
-            card3 = itemView.findViewById(R.id.card3);
+
 
         }
         public void bind(final Users hotel, final OnHotelListener listener) {
@@ -110,10 +89,4 @@ name = itemView.findViewById(R.id.txt_name);
         }
 
     }
-
-
-
-
-
-
 }

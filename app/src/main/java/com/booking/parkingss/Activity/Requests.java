@@ -4,51 +4,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.LinearLayout;
 
+import com.booking.parkingss.Adapter.Requests_Adapter;
 import com.booking.parkingss.Adapter.Service_details_adapter;
 import com.booking.parkingss.Model.Users;
 import com.booking.parkingss.R;
-import com.booking.parkingss.Utility.BottomNavHelper;
 import com.booking.parkingss.Utility.OnHotelListener;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Income extends AppCompatActivity {
+public class Requests extends AppCompatActivity {
 
-    private static final int ACTIVITY_NUM = 2;
-    Context context = Income.this;
-    RecyclerView rec_income;
-
+    RecyclerView recyclerView;
     List<Users> usersList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_income);
-
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
-        BottomNavHelper.enableNavigation(context,bottomNavigationView);
-
-        Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
-        menuItem.setChecked(true);
-        setupIncome();
-
+        setContentView(R.layout.activity_requests);
+requests();
 
     }
 
 
-    private void setupIncome(){
-        rec_income = findViewById(R.id.rec_income);
+    private void requests(){
+        recyclerView = findViewById(R.id.rec_requests);
 
         Users users = new Users("Akash Gupta","123456789","abcd@gmail.com","",
                 "Pickup","Regular","10","",R.drawable.ic_car_black,"","");
@@ -78,18 +62,18 @@ public class Income extends AppCompatActivity {
         usersList.add(users6);
         usersList.add(users7);
 
-        Service_details_adapter adapter = new Service_details_adapter(Income.this, usersList, new OnHotelListener() {
+        Requests_Adapter adapter = new Requests_Adapter(Requests.this, usersList, new OnHotelListener() {
             @Override
             public void onItemClick(Users item) {
-                Intent intent = new Intent(Income.this, Acitivity_Details.class);
+                Intent intent = new Intent(Requests.this, Acitivity_Details.class);
                 startActivity(intent);
 
             }
         });
 
-       // Service_details_adapter service_details_adapter = new Service_details_adapter(this,usersList);
-        rec_income.setLayoutManager(new LinearLayoutManager(this,LinearLayout.VERTICAL,false));
-        rec_income.setAdapter(adapter);
+        // Service_details_adapter service_details_adapter = new Service_details_adapter(this,usersList);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayout.VERTICAL,false));
+        recyclerView.setAdapter(adapter);
 
 
 
@@ -106,6 +90,5 @@ public class Income extends AppCompatActivity {
 
 
     }
-
 
 }
