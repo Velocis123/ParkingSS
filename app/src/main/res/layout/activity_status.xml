@@ -76,7 +76,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+                    android:id="@+id/len4"
                     android:orientation="vertical"
                     >
 
@@ -441,6 +441,49 @@
                     </LinearLayout>
 
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+
+                        android:background="@color/colorWhite"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_25sdp"
+                        android:layout_below="@id/len4"
+
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            app:cardBackgroundColor="@color/colorAccent"
+
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            app:cardCornerRadius="@dimen/_3sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            >
+
+
+                            <Button
+                                android:id="@+id/btn_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                android:background="@color/colorRed"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:text="Not Parked"
+                                android:gravity="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_13sdp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
 
 
 
@@ -456,6 +499,7 @@
 
 
 
+
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
@@ -463,49 +507,6 @@
     </ScrollView>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-
-
-        android:background="@color/colorWhite"
-     android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginBottom="@dimen/_25sdp"
-        android:layout_below="@id/scroll"
-
-        >
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            app:cardBackgroundColor="@color/colorAccent"
-
-            android:layout_marginTop="@dimen/_3sdp"
-            android:layout_marginBottom="@dimen/_3sdp"
-            app:cardCornerRadius="@dimen/_3sdp"
-            android:layout_marginLeft="@dimen/_15sdp"
-            android:layout_marginRight="@dimen/_15sdp"
-            >
-
-
-            <Button
-                android:id="@+id/btn_status"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-
-                android:background="@color/colorRed"
-                android:fontFamily="@font/avenirltstd_light"
-                android:text="Not Parked"
-                android:gravity="center"
-                android:textAllCaps="false"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/_13sdp"
-                android:textStyle="bold" />
-
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
