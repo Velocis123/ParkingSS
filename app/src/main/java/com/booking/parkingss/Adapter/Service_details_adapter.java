@@ -62,12 +62,12 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
 
         flag = new Flag();
 
-        if (!flag.isFlag()){
+        if (flag.isFlag()){
 
-            myViewHolder.card3.setVisibility(View.GONE);
+            myViewHolder.card3.setVisibility(View.VISIBLE);
 
         }else {
-            myViewHolder.card3.setVisibility(View.VISIBLE);
+            myViewHolder.card3.setVisibility(View.GONE);
 
         }
 

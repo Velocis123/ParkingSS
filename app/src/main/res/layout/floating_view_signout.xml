@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_15sdp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="@dimen/_3sdp"
+                android:elevation="@dimen/_20sdp"
+                android:layout_centerInParent="true"
+
+                android:id="@+id/card2"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+                    >
+
+
+
+
+
+                        >
+
+
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="@dimen/_40sdp"
+                  android:text="Are You Sure?"
+                  android:gravity="center"
+                  android:textStyle="bold"
+                  android:fontFamily="@font/avenirltstd_light"
+                  android:textSize="@dimen/_15sdp"
+                  />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_below="@+id/card2"
+
+                        android:background="@color/colorWhite"
+
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:layout_alignParentBottom="true"
+
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            app:cardBackgroundColor="@color/colorAccent"
+
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            app:cardCornerRadius="@dimen/_3sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            >
+
+
+                            <Button
+                                android:id="@+id/yes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                android:background="@color/colorPrimary"
+                                android:fontFamily="@font/avenirltstd_light"
+                                android:text="Yes"
+                                android:gravity="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_13sdp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

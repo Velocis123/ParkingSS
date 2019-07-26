@@ -38,7 +38,7 @@ public class Acitivity_Details extends AppCompatActivity {
         flag =new Flag();
         flag.setFlag(true);
 
-        if (!flag.isFlag()){
+        if (flag.isFlag()){
 
             load_fragment(new Details_Paying());
 
