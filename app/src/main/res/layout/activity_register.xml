@@ -16,13 +16,13 @@
     <RelativeLayout
         android:id="@+id/rel1"
         android:layout_width="@dimen/_275sdp"
-        android:layout_height="@dimen/_210sdp"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="@dimen/_20sdp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/colorWhite"
             android:layout_marginLeft="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_5sdp"
@@ -121,6 +121,29 @@
                         android:layout_marginRight="@dimen/_10sdp"
                         android:background="#000000"/>
 
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@null"
+                        android:drawableStart="@drawable/otp_24dp"
+                        android:drawablePadding="10dip"
+                        android:fontFamily="@font/avenirltstd_light"
+                        android:hint="Enter Password "
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="#000000"
+                        android:textColorHint="#000000"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="#000000"/>
 
                     <EditText
                         android:id="@+id/otp"
@@ -141,6 +164,7 @@
 
 
 
+
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_1sdp"
@@ -158,6 +182,7 @@
     android:layout_marginTop="@dimen/_25sdp"
     android:elevation="@dimen/_20sdp"
     app:cardCornerRadius="@dimen/_3sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
 
     >
 

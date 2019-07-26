@@ -127,7 +127,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:textColor="@color/colorDark"
                         android:textStyle="bold"
-                        android:text="Car Details"
+                        android:text="Vehicle Details"
                         android:textSize="@dimen/_13sdp"
 
 

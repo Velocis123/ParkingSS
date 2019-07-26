@@ -32,7 +32,7 @@ public class Splash extends AppCompatActivity {
 
                     Thread.sleep(6000);
 
-                    startActivity(new Intent(Splash.this, Login.class));
+                    startActivity(new Intent(Splash.this, Login_User.class));
                     //  Splash.super.finish();
 
                 } catch (Exception e) {

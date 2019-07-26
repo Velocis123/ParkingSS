@@ -47,7 +47,7 @@ Button yes = v1.findViewById(R.id.yes);
 yes.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(Profile.this,Login.class);
+        Intent intent = new Intent(Profile.this,Login_User.class);
         startActivity(intent);
 
     }
