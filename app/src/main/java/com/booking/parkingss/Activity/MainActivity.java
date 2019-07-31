@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         menuItem.setChecked(true);
 
 
-        Toast.makeText(this,"yes",Toast.LENGTH_LONG).show();
+
 
         if (flag.isLogin_type()){
 

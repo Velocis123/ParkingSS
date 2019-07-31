@@ -50,12 +50,12 @@ flag.setFlag(true);
                 if (radioButton1.isChecked()){
 
                     flag.setLogin_type(true);
-                    Toast.makeText(Login_User.this,"driver",Toast.LENGTH_LONG).show();
+
 
                 }
                 else {
                     flag.setLogin_type(false);
-                    Toast.makeText(Login_User.this,"cardesk",Toast.LENGTH_LONG).show();
+
                 }
 
                 startActivity(intent);
