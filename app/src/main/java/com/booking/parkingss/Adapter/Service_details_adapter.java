@@ -1,7 +1,6 @@
 package com.booking.parkingss.Adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.booking.parkingss.Application.Flag;
 import com.booking.parkingss.Model.Users;
 import com.booking.parkingss.R;
-import com.booking.parkingss.Utility.OnHotelListener;
+import com.booking.parkingss.Utility.MyCustomListener;
 
 import java.util.List;
 
@@ -23,10 +22,10 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
 
     private Context mContext;
     private List<Users> usersList;
-    private OnHotelListener listener;
+    private MyCustomListener listener;
     private Flag flag;
 
-    public Service_details_adapter(Context mContext, List<Users> usersList, OnHotelListener listener) {
+    public Service_details_adapter(Context mContext, List<Users> usersList, MyCustomListener listener) {
         this.mContext = mContext;
         this.usersList = usersList;
         this.listener = listener;
@@ -60,7 +59,7 @@ public class Service_details_adapter extends  RecyclerView.Adapter<Service_detai
         myViewHolder.img_profile.setImageResource(users.getImg_demo());
       //  myViewHolder.time.setText(users.getTime());
 
-        flag = new Flag();
+     flag=(Flag)mContext.getApplicationContext();
 
         if (flag.isFlag()){
 
@@ -99,7 +98,7 @@ name = itemView.findViewById(R.id.txt_name);
             card3 = itemView.findViewById(R.id.card3);
 
         }
-        public void bind(final Users hotel, final OnHotelListener listener) {
+        public void bind(final Users hotel, final MyCustomListener listener) {
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

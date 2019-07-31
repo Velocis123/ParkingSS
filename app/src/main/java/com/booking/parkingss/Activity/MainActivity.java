@@ -1,6 +1,9 @@
 package com.booking.parkingss.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +16,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.booking.parkingss.Application.Flag;
+import com.booking.parkingss.Fragments.CarDesk;
+import com.booking.parkingss.Fragments.CarDesk_Status;
+import com.booking.parkingss.Fragments.Driver;
 import com.booking.parkingss.R;
 import com.booking.parkingss.Utility.BottomNavHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -22,21 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
     Context context = MainActivity.this;
     private static final int ACTIVITY_NUM = 0;
-ImageView img_status;
-TextView txt_status;
-Boolean flag= false;
-GestureDetector gestureDetector;
-Button btn_req;
+    Button btn_accepted_req;
+    Flag flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       // btn_accepted_req =
 
-txt_status=findViewById(R.id.txt_status);
-img_status = findViewById(R.id.img_status);
-btn_req = findViewById(R.id.btn_req);
-gestureDetector = new GestureDetector(this,new MyGesturesListener() );
+        flag=(Flag)getApplicationContext();
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
         BottomNavHelper.enableNavigation(context,bottomNavigationView);
 
@@ -44,41 +47,37 @@ gestureDetector = new GestureDetector(this,new MyGesturesListener() );
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
 
-        btn_req.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Requests.class);
-                startActivity(intent);
-            }
-        });
 
-img_status.setOnTouchListener(new View.OnTouchListener() {
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
+        Toast.makeText(this,"yes",Toast.LENGTH_LONG).show();
 
-gestureDetector.onTouchEvent(event);
-        return true;
-    }
-});
+        if (flag.isLogin_type()){
+
+            load_fragment(new Driver());
 
 
-    }
-
-
-    class MyGesturesListener extends GestureDetector.SimpleOnGestureListener{
-        @Override
-        public boolean onSingleTapUp(MotionEvent ev) {
-         img_status.setImageResource(R.drawable.ic_unavailable);
-         txt_status.setText("Unavailable");
-         txt_status.setTextColor(getResources().getColor(R.color.colorRed));
-            return true;
+        }else
+        {
+            load_fragment(new CarDesk());
         }
-        @Override
-        public boolean onDoubleTap(MotionEvent ev) {
-            img_status.setImageResource(R.drawable.ic_available);
-            txt_status.setText("Available");
-            txt_status.setTextColor(getResources().getColor(R.color.colorLightGreen));
-            return true;
-        }
+
+
+
+
+
+
+
     }
+
+    private void load_fragment(Fragment fragment){
+
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.rel_inflatee,fragment);
+        fragmentTransaction.commit();
+
+
+
+    }
+
 }
+

@@ -6,6 +6,17 @@ public class Flag extends Application {
 
     private boolean flag;
 
+
+public boolean login_type;
+
+    public boolean isLogin_type() {
+        return login_type;
+    }
+
+    public void setLogin_type(boolean login_type) {
+        this.login_type = login_type;
+    }
+
     public Flag() {
 
     }

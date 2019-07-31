@@ -17,18 +17,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.booking.parkingss.Activity.Status;
 import com.booking.parkingss.Model.Users;
 import com.booking.parkingss.R;
-import com.booking.parkingss.Utility.MyCustomListener;
 
 import java.util.List;
 
-public class Requests_Adapter extends  RecyclerView.Adapter<Requests_Adapter.MyViewHolder> {
+public class Cardesk_accept_Adapter extends  RecyclerView.Adapter<Cardesk_accept_Adapter.MyViewHolder> {
 
     private Context mContext;
     private List<Users> usersList;
 
 
-
-    public Requests_Adapter(Context mContext, List<Users> usersList) {
+    public Cardesk_accept_Adapter(Context mContext, List<Users> usersList) {
         this.mContext = mContext;
         this.usersList = usersList;
 
@@ -38,7 +36,7 @@ public class Requests_Adapter extends  RecyclerView.Adapter<Requests_Adapter.MyV
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(mContext)
-                .inflate(R.layout.fragment_requests, viewGroup, false);
+                .inflate(R.layout.fragment_cardesk_status_inflate, viewGroup, false);
 
         return new MyViewHolder(itemView);
 
@@ -46,7 +44,7 @@ public class Requests_Adapter extends  RecyclerView.Adapter<Requests_Adapter.MyV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, int i) {
 //        UniversalImageLoader universalImageLoader = new UniversalImageLoader(mContext);
 //        ImageLoader.getInstance().init(universalImageLoader.getConfig());
 
@@ -61,7 +59,7 @@ myViewHolder.accept.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
         AlertDialog.Builder ab=new AlertDialog.Builder(mContext);
 
-        View v1= LayoutInflater.from(mContext).inflate(R.layout.floating_view_accepted,null,false);
+        final View v1= LayoutInflater.from(mContext).inflate(R.layout.floating_view_keys_taken,null,false);
 
         Button b=v1.findViewById(R.id.ok);
         b.setOnClickListener(new View.OnClickListener() {
@@ -69,11 +67,15 @@ myViewHolder.accept.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, Status.class);
                 mContext.startActivity(intent);
+
             }
         });
+
         ab.setView(v1);
 
         ab.show();
+
+
 
     }
 });
@@ -101,15 +103,6 @@ myViewHolder.accept.setOnClickListener(new View.OnClickListener() {
             super(itemView);
 
 accept = itemView.findViewById(R.id.btn_accept);
-        }
-        public void bind(final Users hotel, final MyCustomListener listener) {
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.onItemClick(hotel);
-                }
-            });
         }
 
     }

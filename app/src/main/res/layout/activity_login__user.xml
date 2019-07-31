@@ -52,6 +52,57 @@
                     android:background="#000000"/>
 
 
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:id="@+id/radio"
+                    >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+android:checked="true"
+                        android:text="Driver"
+
+                        android:id="@+id/driver"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/avenirltstd_light"
+
+
+                        />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:id="@+id/cardesk"
+                        android:text="Car Desk"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/avenirltstd_light"
+
+
+                        />
+
+
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="#000000"/>
+
 
                 <EditText
                     android:id="@+id/phone"

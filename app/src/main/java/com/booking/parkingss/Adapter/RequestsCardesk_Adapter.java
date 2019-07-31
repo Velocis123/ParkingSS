@@ -21,17 +21,17 @@ import com.booking.parkingss.Utility.MyCustomListener;
 
 import java.util.List;
 
-public class Requests_Adapter extends  RecyclerView.Adapter<Requests_Adapter.MyViewHolder> {
+public class RequestsCardesk_Adapter extends  RecyclerView.Adapter<RequestsCardesk_Adapter.MyViewHolder> {
 
     private Context mContext;
     private List<Users> usersList;
+    private MyCustomListener listener;
 
 
-
-    public Requests_Adapter(Context mContext, List<Users> usersList) {
+    public RequestsCardesk_Adapter(Context mContext, List<Users> usersList, MyCustomListener listener) {
         this.mContext = mContext;
         this.usersList = usersList;
-
+        this.listener = listener;
     }
 
     @NonNull
@@ -50,7 +50,7 @@ public class Requests_Adapter extends  RecyclerView.Adapter<Requests_Adapter.MyV
 //        UniversalImageLoader universalImageLoader = new UniversalImageLoader(mContext);
 //        ImageLoader.getInstance().init(universalImageLoader.getConfig());
 
-
+        myViewHolder.bind(usersList.get(i), listener);
         Users users = usersList.get(i);
 //
 //        UniversalImageLoader.setImage(amenities.getAmenities_img(),myViewHolder.img_amenities,null,"https://");

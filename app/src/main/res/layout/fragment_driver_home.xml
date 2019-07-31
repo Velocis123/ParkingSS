@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:background="@color/colorWhite"
+    >
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:id="@+id/len1"
+
+        android:orientation="vertical"
+        >
+
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDark"
+            android:fontFamily="@font/avenirltstd_light"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="center"
+            android:text="Requests"
+            android:id="@+id/txt_status"
+            android:layout_marginTop="@dimen/_3sdp"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/len1"
+        android:id="@+id/tabl"
+        >
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tabs"
+            >
+
+
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </RelativeLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:layout_below="@+id/tabl"
+        >
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
