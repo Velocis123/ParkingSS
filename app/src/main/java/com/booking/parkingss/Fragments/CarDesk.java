@@ -22,12 +22,14 @@ import com.booking.parkingss.Activity.Requests;
 import com.booking.parkingss.Activity.Status;
 import com.booking.parkingss.R;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class CarDesk extends Fragment {
 
     View view;
 
-    ImageView img_status;
+    CircleImageView img_status;
     TextView txt_status;
     Boolean flag= false;
     GestureDetector gestureDetector;
