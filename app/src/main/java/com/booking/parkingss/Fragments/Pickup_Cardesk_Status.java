@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -13,44 +12,36 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import com.booking.parkingss.Activity.Car_Status;
+import com.booking.parkingss.Adapter.Cardesk_accept_Adapter;
 import com.booking.parkingss.Adapter.Cardesk_status_Adapter;
 import com.booking.parkingss.Model.Users;
 import com.booking.parkingss.R;
 import com.booking.parkingss.Utility.MyCustomListener;
-import com.booking.parkingss.Utility.SectionsPagerAdapter;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class CarDesk_Status extends Fragment {
-
-    View view;
-    Button status;
-    RecyclerView rec_cardesk_status;
+public class Pickup_Cardesk_Status extends Fragment {
+    RecyclerView recyclerView;
     List<Users> usersList = new ArrayList<>();
-
-
-
+    View view;
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_drop,container,false);
 
-view = inflater.inflate(R.layout.fragment_cardesk_status,container,false);
-
-
-setupViewPager();
+        requests();
 
 
         return view;
     }
-    private void setupIncome(){
 
+
+    private void requests(){
+        recyclerView = view.findViewById(R.id.recycle_user_requests);
 
         Users users = new Users("Akash Gupta","123456789","abcd@gmail.com","",
                 "Pickup","Regular","10","",R.drawable.ic_car_black,"","");
@@ -90,8 +81,8 @@ setupViewPager();
         });
 
         // Service_details_adapter service_details_adapter = new Service_details_adapter(this,usersList);
-        rec_cardesk_status.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayout.VERTICAL,false));
-        rec_cardesk_status.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayout.VERTICAL,false));
+        recyclerView.setAdapter(adapter);
 
 
 
@@ -108,21 +99,5 @@ setupViewPager();
 
 
     }
-
-    private void setupViewPager(){
-        SectionsPagerAdapter adapter = new SectionsPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new Pickup_Cardesk_Status()); //index 0
-        adapter.addFragment(new Drop_cardesk_Status()); //index 1
-        ViewPager viewPager = view.findViewById(R.id.container);
-        viewPager.setAdapter(adapter);
-
-        TabLayout tabLayout =view.findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
-
-        tabLayout.getTabAt(0).setText("Pickup");
-        tabLayout.getTabAt(1).setText("Drop");
-
-    }
-
 
 }

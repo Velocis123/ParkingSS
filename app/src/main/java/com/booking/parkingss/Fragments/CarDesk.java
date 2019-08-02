@@ -29,7 +29,7 @@ public class CarDesk extends Fragment {
 
     View view;
 
-    CircleImageView img_status;
+    ImageView img_status;
     TextView txt_status;
     Boolean flag= false;
     GestureDetector gestureDetector;

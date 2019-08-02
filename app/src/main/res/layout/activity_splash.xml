@@ -21,15 +21,25 @@ android:orientation="vertical"
 
         >
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="@dimen/_170sdp"
-                android:layout_height="@dimen/_170sdp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_centerInParent="true"
+            android:elevation="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_100sdp"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_180sdp"
+
                 android:src="@drawable/ic_carblue"
+                android:layout_gravity="center"
                 android:id="@+id/img_status"
-                android:scaleType="fitXY"
-                android:background="@color/colorWhite"
 
                 />
+        </androidx.cardview.widget.CardView>
 
 
 

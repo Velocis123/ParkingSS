@@ -33,29 +33,7 @@
             >
 
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginRight="@dimen/_10sdp"
-                >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/avenirltstd_light"
-                    android:textColor="@color/colorWhite"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:text="Edit"
-                    android:id="@+id/txt_edit"
-                    android:paddingRight="@dimen/_5sdp"
-                    android:drawableLeft="@drawable/ic_edit"
-                    android:textSize="@dimen/_10sdp"
-
-                    />
-
-            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -272,92 +250,9 @@
 
 
         </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            android:layout_below="@+id/rel5"
-
-            android:background="@color/colorWhite"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_2sdp"
-            android:layout_alignParentBottom="true"
-
-            >
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                app:cardBackgroundColor="@color/colorAccent"
-
-                android:layout_marginTop="@dimen/_3sdp"
-                android:layout_marginBottom="@dimen/_3sdp"
-                app:cardCornerRadius="@dimen/_3sdp"
-                android:layout_marginLeft="@dimen/_25sdp"
-                android:layout_marginRight="@dimen/_25sdp"
-                >
-
-
-                <Button
-                    android:id="@+id/btn_signout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-
-                    android:background="@color/colorPrimary"
-                    android:fontFamily="@font/avenirltstd_light"
-                    android:text="Sign Out"
-                    android:gravity="center"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold" />
-
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorAccent"
-        android:layout_below="@id/rel2"
-        android:layout_marginTop="@dimen/_minus50sdp"
-        android:id="@+id/rel3"
-
-        >
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:elevation="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_3sdp"
-            >
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:labelVisibilityMode="labeled"
-                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
-                app:menu="@menu/menu_bottomnavigation"
-                app:itemIconTint="@drawable/bottom_nav_selected_color"
-                android:id="@+id/bottom_nav_view"
-                app:itemTextColor="@drawable/bottom_nav_selected_color"
-                android:background="@color/colorAccent"
-
-
-                >
-
-
-
-
-
-            </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-        </androidx.cardview.widget.CardView>
-
-    </RelativeLayout>
 
 </LinearLayout>

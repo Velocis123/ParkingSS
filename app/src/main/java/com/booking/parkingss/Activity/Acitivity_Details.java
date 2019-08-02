@@ -35,7 +35,7 @@ public class Acitivity_Details extends AppCompatActivity {
             }
         });
 
-        flag =new Flag();
+        flag=(Flag)getApplicationContext();
         flag.setFlag(false);
 
         if (flag.isFlag()){
